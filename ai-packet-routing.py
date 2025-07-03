@@ -21,7 +21,7 @@ graph_data = {
 # Algorithms
 def uniform_cost_search(graph, start, goal):
     frontier = []
-    heapq.heappush(frontier, (0, start, [start]))  # (cost, node, path)
+    heapq.heappush(frontier, (0, start, [start]))
     explored = set()
     visited_costs = {start: 0}
     nodes_expanded = 0
@@ -110,7 +110,7 @@ def depth_first_search(graph, start, goal):
 
     return None
 
-# Measure and display execution time for each algorithm
+# Output
 start_ucs = time.time()
 result_ucs = uniform_cost_search(graph_data, 'A', 'J')
 elapsed_ucs = time.time() - start_ucs
